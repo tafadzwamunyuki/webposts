@@ -1,0 +1,338 @@
+/* Header image */
+.landing-img {
+  max-height: 1200px;
+  margin-top: 15px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.landing-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+  border-radius: 30px;
+}
+
+/* src/components/Header */
+/*
+.navbar {
+  width: 100vw;
+  height: 7vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  align-items: center;
+  margin-right: 20px;
+  font-size: 34px;
+}
+*/
+
+.navbar {
+  width: 100%;
+  height: 60px; /* Fixed height works better across devices */
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  font-size: 34px;
+  box-sizing: border-box;
+}
+
+/* Responsive styles for mobile screens */
+@media (max-width: 768px) {
+  .navbar {
+    height: 50px;
+    padding: 0 1rem;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 45px;
+    padding: 0 0.5rem;
+    font-size: 20px;
+  }
+}
+
+
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.navbar-nav {
+  padding-right: 6.8rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-item .nav-link {
+  font-weight: 500;
+  color: #283133 !important;
+  transition: color 0.3s ease;
+  padding-right: 80px;
+}
+
+.nav-item .nav-link:hover,
+.nav-item .nav-link.active {
+  color: #0e9dc4 !important; /* Gold accent */
+}
+
+.footer {
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+  margin-top: 25px;
+}
+
+.social {
+  color: #1f5464;
+  width: 128px;
+  margin-top: 30px;
+}
+
+/* Articles page */
+/* Container for the image cards */
+.card-container {
+  display: flex;
+  justify-content: space-between; /* Ensures even space between cards */
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap; /* Wraps the cards to the next line if the screen is too small */
+  gap: 20px; /* Adds space between cards */
+  padding:  20px;
+}
+
+/* Each individual card */
+.card {
+  background-color: #fff; /* Card background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  display: flex;
+  height: 350px;
+  flex-direction: column;
+  overflow: hidden; /* Ensures content stays inside the card */
+  width: calc(25% - 20px); /* Each card takes 25% of the container width minus the gap */
+  transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+/* Image within each card */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block; /* Prevents extra space below image */ 
+  background-color: #fff;
+}
+
+/* Card content */
+.card-content {
+  padding: 15px;
+  text-align: center; /* Centers the text */
+  border-radius: 10px;
+}
+
+/* Article Description */
+.card-description {
+  width: 1200px;
+ 
+}
+
+/* Card body */
+.card-body {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Hover effect: card slightly moves up */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Each card */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(25% - 30px);   /* 4 cards per row */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  height: 350px;             /* Fixed height */
+}
+
+/* Image inside card */
+.card img {
+  width: 100%;
+  height: 200px;             /* Force uniform image height */
+  object-fit: contain;         /* Crop and fill evenly */
+  display: block;
+}
+
+/* Card body */
+.card-body {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  width:200px;
+  
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.navbar-toggler {
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+/* Customize navbar toggler when it’s expanded (on mobile) */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+}
+
+/* For smoother transitions when toggling */
+.navbar-collapse {
+  transition: max-height 0.35s ease;
+}
+
+/* Adjust the navbar links spacing on mobile view */
+.navbar-nav .nav-link {
+  padding-left: 5.9rem;
+  padding-right: 1.5rem;
+  line-height: 36px;
+}
+
+@keyframes blink {
+  0% {
+      opacity: 1;
+  }
+
+  50% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+.note {
+  color: red;
+  font-family: Arial;
+  font-weight: 500;
+  animation: blink 3s infinite;
+  font-size: 1.5rem;
+  margin-top: 25px;
+}
+
+/* Ensure the logo doesn't overflow and is responsive */
+.navbar-brand img {
+  width: 60px;
+  height: auto;
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .card {
+    width: calc(33.333% - 20px); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 20px); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* Stack on small screens */
+  }
+}
+
+
+@media (max-width: 576px) {
+  .lead {
+    font-size: 1rem; /* Adjusts font size on smaller screens */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Adjusts heading size for smaller screens */
+  }
+}
+
+
