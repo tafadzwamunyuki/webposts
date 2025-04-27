@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import "../index.css"
 
@@ -28,6 +28,17 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <Link className={`nav-link ${location.pathname === '/create' ? 'active' : ''}`} to="/create">Add Article</Link>
+            </li>
+            <li className="nav-item">
+              <a
+                href='https://www.buymeacoffee.com/tafadzwamunyuki'
+                target='_blank'
+                rel="noopener noreferrer"
+              >
+                <Button variant="light" className="ms-3">
+                ☕ Buy Me a Coffee
+                </Button>
+              </a>
             </li>
           </Nav>
         </Navbar.Collapse>
