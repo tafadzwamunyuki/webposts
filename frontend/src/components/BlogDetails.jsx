@@ -16,7 +16,7 @@ export default function BlogDetails() {
 
   return (
     <div className="container mt-4">
-      <Link to="/" className="btn btn-secondary mb-3">← Back to Articles</Link>
+      <Link to="/blogs" className="btn btn-secondary mb-3">← Back to Articles</Link>
 
       <div className="card mb-4">
         {blog.image && (
@@ -30,6 +30,7 @@ export default function BlogDetails() {
         <div className="card-body">
           <h3 className="card-title">{blog.title}</h3>
           <p className="card-text"><strong>Author:</strong> {blog.author}</p>
+          <p><strong>Published:</strong> {new Date(blog.createdAt).toLocaleString('en-GB', { timeZone: 'Europe/London' })}</p>
 
           {/* View Description Link */}
           <Link to={`/blog/${blog._id}/description`} className="btn btn-primary me-2">
