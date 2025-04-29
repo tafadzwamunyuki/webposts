@@ -1,45 +1,56 @@
 import React from 'react';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import "../index.css"
+import { Link, useLocation } from 'react-router-dom';
+import "../index.css";
 
 const Header = () => {
+  const location = useLocation();
+
+  const handleNavClick = () => {
+    const menuToggle = document.querySelector('.navbar-collapse');
+    if (menuToggle && menuToggle.classList.contains('show')) {
+      menuToggle.classList.remove('show');
+    }
+  };
+
   return (
-    <Navbar expand="lg" bg="info" collapseOnSelect sticky="top">
+    <Navbar expand="lg" bg="dark" variant="dark" collapseOnSelect sticky="top">
       <Container>
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
           <img
             src="/freelog.logo.jpeg"
-            alt=""
+            alt="FreeLog Logo"
             className="logo"
           />
-          <span className="ms-2 fw-bold text-light"></span>
+          <span className="ms-2 fw-bold text-light">FreeLog</span>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="navbar-nav" />
-        
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ms-auto text-center">
-          <li className="nav-item">
-              <Link className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} to="/">Home</Link>
-            </li>
-            <li className="nav-item">
-              <Link className={`nav-link ${location.pathname.startsWith('/blogs') ? 'active' : ''}`} to="/blogs">Articles</Link>
-            </li>
-            <li className="nav-item">
-              <Link className={`nav-link ${location.pathname === '/create' ? 'active' : ''}`} to="/create">Add Article</Link>
-            </li>
-            <li className="nav-item">
-              <a
-                href='https://www.buymeacoffee.com/tafadzwamunyuki'
-                target='_blank'
-                rel="noopener noreferrer"
-              >
-                <Button variant="light" className="ms-3">
+            <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active-text' : ''}`} onClick={handleNavClick}>
+              Home
+            </Link>
+            <Link to="/blogs" className={`nav-link ${location.pathname.startsWith('/blogs') ? 'active-text' : ''}`} onClick={handleNavClick}>
+              Articles
+            </Link>
+            <Link to="/about" className={`nav-link ${location.pathname === '/about' ? 'active-text' : ''}`} onClick={handleNavClick}>
+              About
+            </Link>
+            <Link to="/create" className={`nav-link ${location.pathname === '/create' ? 'active-text' : ''}`} onClick={handleNavClick}>
+              Add Article
+            </Link>
+            <a
+              href="https://www.buymeacoffee.com/tafadzwamunyuki"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-link"
+              onClick={handleNavClick}
+            >
+              <Button variant="light" className="ms-2">
                 ☕ Buy Me a Coffee
-                </Button>
-              </a>
-            </li>
+              </Button>
+            </a>
           </Nav>
         </Navbar.Collapse>
       </Container>
