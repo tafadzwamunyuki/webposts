@@ -10,6 +10,7 @@ import CreatePost from './components/CreatePost';
 import EditPost from './components/EditPost';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import About from './components/About';
 
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/blogs" element={<BlogList />} />
         <Route path="/blog/:id" element={<BlogDetails />} />
+        <Route path='/about' element={<About />} />
         <Route path="/blog/:id/description" element={<BlogDescription />} />
         <Route path="/create" element={<CreatePost />} />
         <Route path="/edit/:id" element={<EditPost />} />
