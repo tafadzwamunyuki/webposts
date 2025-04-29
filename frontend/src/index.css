@@ -40,6 +40,7 @@
   padding: 0 2rem;
   display: flex;
   align-items: center;
+  font-weight:100;
   font-size: 34px;
   box-sizing: border-box;
 }
@@ -60,8 +61,6 @@
     font-size: 20px;
   }
 }
-
-
 
 .navbar-toggler {
   border: none;
@@ -92,6 +91,10 @@
 .nav-item .nav-link:hover,
 .nav-item .nav-link.active {
   color: #0e9dc4 !important; /* Gold accent */
+}
+
+.nav-link.active-text {
+  color: #ccc !important;
 }
 
 .footer {
@@ -218,6 +221,20 @@
   transform: translateY(-5px);
 }
 
+.full-width-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 2rem;
+  margin-top: 1.5rem; /* same as Bootstrap mt-4 */
+}
+
+.full-width-card {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .navbar-toggler {
   border: 1px solid transparent;
   border-radius: 0.25rem;
@@ -264,9 +281,22 @@
   }
 }
 
+.nav-link {
+  color: white !important;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link.active-text {
+  color: #ccc !important;
+  font-weight: 500;
+}
+
+
 /* For smoother transitions when toggling */
 .navbar-collapse {
   transition: max-height 0.35s ease;
+  background-color: rgb(13 202 240) !important;
+  border-radius: 25px;
 }
 
 /* Adjust the navbar links spacing on mobile view */
@@ -274,6 +304,7 @@
   padding-left: 5.9rem;
   padding-right: 1.5rem;
   line-height: 36px;
+  color: white !important;
 }
 
 @keyframes blink {
