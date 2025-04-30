@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <Navbar expand="lg" bg="dark" variant="dark" collapseOnSelect sticky="top">
       <Container>
-        <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
+        <Navbar.Brand as={Link} to="/" className="navbar-brand">
           <img
             src="/freelog.logo.jpeg"
             alt="FreeLog Logo"
