@@ -21,6 +21,7 @@ export default function CreatePost() {
       formData.append('author', author);
       formData.append('image', image);
 
+     
       await axios.post('http://localhost:5000/api/blogs', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
