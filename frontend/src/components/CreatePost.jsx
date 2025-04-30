@@ -21,7 +21,8 @@ export default function CreatePost() {
       formData.append('author', author);
       formData.append('image', image);
 
-      await axios.post('http://localhost:5000/api/blogs', formData, {
+      // await axios.post('http://localhost:5000/api/blogs', formData,
+      await axios.post('http://192.168.0.5:5000/api/blogs', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -84,5 +85,6 @@ export default function CreatePost() {
         <button type="submit" className="btn btn-success">Submit</button>
       </form>
     </div>
-  );
+  );22
 }
+2
